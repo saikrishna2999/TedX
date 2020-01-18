@@ -1,3 +1,4 @@
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 html {
   scroll-behavior: smooth;
 }
@@ -101,6 +102,95 @@ body {
 
 #previous_speakers {
   padding: 5% 10%;
+}
+
+#other{
+  margin: 0;
+  /*height:300px;*/
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-info{
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+
+.card{
+  z-index: 11;
+  background:none;
+  padding: 10px 10px;
+  margin: 0 10px;
+  width: calc(25% - 20px);
+  height: calc(25% - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  border-left:6px solid red;
+  border-top:6px solid red; 
+}
+
+.card-icon{
+  font-size: 28px;
+  background: #ff6348;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px !important;
+  border-radius: 50%;
+  transition: 0.3s linear;
+}
+
+.card:hover{
+  border-left:0;
+  border-top:0;
+  border-right:6px solid red;
+  border-bottom: 6px solid red;
+}
+
+.card:hover .card-icon{
+  background: none;
+  color: #ff6348;
+  transform: scale(1.6);
+}
+
+.card p{
+  margin-top: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 12px;
+  max-height: 0;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.card:hover p{
+  max-height: 40px;
+  opacity: 1;
+}
+
+
+@media screen and (max-width:900px) {
+  .contact-info{
+    flex-direction: column;
+  }
+  .card{
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+  }
 }
 
 .pad {
